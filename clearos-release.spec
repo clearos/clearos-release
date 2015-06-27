@@ -29,7 +29,7 @@ Provides:       centos-release(upstream) = %{upstream_rel}
 Provides:       redhat-release = %{upstream_rel}
 Provides:       system-release = %{upstream_rel}
 Provides:       system-release(releasever) = %{base_release_version}
-Source:         %{name}-%{base_release_version}.1.tar.gz
+Source:         %{name}-%{version}.tar.gz
 # TODO: FIXME: Need to hack /etc/yum.conf, so add requirement.  Kludge.
 Requires(post):       yum
 
