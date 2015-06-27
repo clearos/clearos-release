@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+
+The ClearOS distribution would not be possible without the hard work and
+dedication of a large number of talented people. It's only fair that we
+acknowledge the time and effort that they have put into the distribution.
+
+We are always in need of more volunteers. If you're interested in joining
+the ClearOS Project, please join us on irc.freenode.net in #clearfoundation
+
+
+## Special Recognition ## 
+
+One of the key reasons we got delayed on the ClearOS-6 release was lack of 
+suitable build resources, especially when we had to repeatedly build large
+chunks of code. Shad L came forward and worked with us to setup a large
+build cluster, then tune the build process and help improve the overall
+build, test and validate process we were using.
+
+Having this capability was key in our ability to build, test and deliver
+ClearOS-7 as rapidly as we have been able to.
+
+Contributors:
+  The Red Hat developers, without whom ClearOS would look very different
+

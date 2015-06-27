@@ -1,0 +1,13 @@
+[clearos-zfs]
+name=ZFS on Linux for EL$releasever
+baseurl=http://archive.zfsonlinux.org/epel/$releasever/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
+
+[clearos-zfs-testing]
+name=ZFS on Linux for EL$releasever - Testing
+baseurl=http://archive.zfsonlinux.org/epel-testing/$releasever/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
