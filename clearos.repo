@@ -3,7 +3,15 @@ name=ClearOS $releasever - $basearch - OS
 #baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/os/$basearch/
 mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-os-$releasever
 enabled=1
-gpgcheck=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
+
+[clearos-verified]
+name=ClearOS $releasever - $basearch - Verified Updates
+#baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/verified/$basearch/
+mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-verified-$releasever
+enabled=1
+gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
 
 [clearos-updates]
@@ -11,7 +19,7 @@ name=ClearOS $releasever - $basearch - Updates
 #baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/updates/$basearch/
 mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-updates-$releasever
 enabled=1
-gpgcheck=0
+gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
 
 [clearos-updates-testing]
@@ -19,45 +27,21 @@ name=ClearOS $releasever - $basearch - Updates (Testing)
 #baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/updates-testing/$basearch/
 mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-updates-testing-$releasever
 enabled=0
-gpgcheck=0
+gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-Testing-$releasever
-
-[clearos-extras]
-name=ClearOS $releasever - $basearch - Extras
-#baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/extras/$basearch/
-mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-extras-$releasever
-enabled=1
-gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
-
-[clearos-addons]
-name=ClearOS $releasever - $basearch - Addons
-#baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/addons/$basearch/
-mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-addons-$releasever
-enabled=1
-gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
 
 [clearos-contribs]
 name=ClearOS $releasever - $basearch - Contribs
 #baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/contribs/$basearch/
 mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-contribs-$releasever
 enabled=0
-gpgcheck=0
+gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
 
-[clearos-test]
-name=ClearOS $releasever - $basearch - Testing (Alpha)
-#baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/test/$basearch/
-mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-test-$releasever
+[clearos-contribs-testing]
+name=ClearOS $releasever - $basearch - Contribs (Testing)
+#baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/contribs-testing/$basearch/
+mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-contribs-testing-$releasever
 enabled=0
-gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-Testing-$releasever
-
-[clearos-dev]
-name=ClearOS $releasever - $basearch - Development (Pre-alpha)
-#baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/dev/$basearch/
-mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-dev-$releasever
-enabled=0
-gpgcheck=0
+gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-Testing-$releasever
