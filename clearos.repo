@@ -30,6 +30,14 @@ enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-Testing-$releasever
 
+[clearos-infra]
+name=ClearOS $releasever - $basearch - Infrastructure
+#baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/infra/$basearch/
+mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-infra-$releasever
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
+
 [clearos-contribs]
 name=ClearOS $releasever - $basearch - Contribs
 #baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/contribs/$basearch/
