@@ -6,14 +6,6 @@ enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
 
-[clearos-verified]
-name=ClearOS $releasever - $basearch - Verified Updates
-#baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/verified/$basearch/
-mirrorlist=http://mirrorlist.clearfoundation.com/clearos/mirrorlist/clearos-testing-verified-$releasever
-enabled=1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
-
 [clearos-updates]
 name=ClearOS $releasever - $basearch - Updates
 #baseurl=http://mirror.clearfoundation.com/clearos/testing/$releasever/updates/$basearch/
