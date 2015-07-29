@@ -9,7 +9,7 @@
 %define upstream_rel 7.1
 %define product_vendor clear
 %define software_id 10700
-%define clearos_rel 1.7
+%define clearos_rel 1.8
 %define centos_rel 1.1503
 %define beta Beta
 %define dist .v%{dist_release_version}
