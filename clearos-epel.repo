@@ -5,7 +5,7 @@ mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-$releasever&arch
 failovermethod=priority
 enabled=0
 gpgcheck=1
-exclude=amavisd-new amavisd-new-snmp amavisd-new-snmp-zeromq amavisd-new-zeromq clamav clamav-data clamav-data-empty clamav-devel clamav-filesystem clamav-lib clamav-milter clamav-milter-systemd clamav-milter-sysvinit clamav-scanner clamav-scanner-systemd clamav-scanner-sysvinit clamav-server clamav-server-systemd clamav-server-sysvinit clamav-update libc-client libdb4 libdb4-cxx libdb4-cxx-devel libdb4-devel libdb4-devel-static libdb4-doc libdb4-java libdb4-java-devel libdb4-tcl libdb4-tcl-devel libdb4-utils phpMyAdmin pptpd pptpd-sysvinit tnef tnef-dolphin tnef-nautilus uw-imap uw-imap-devel uw-imap-static uw-imap-utils
+exclude=amavisd-new amavisd-new-snmp amavisd-new-snmp-zeromq amavisd-new-zeromq clamav clamav-data clamav-data-empty clamav-devel clamav-filesystem clamav-lib clamav-milter clamav-milter-systemd clamav-milter-sysvinit clamav-scanner clamav-scanner-systemd clamav-scanner-sysvinit clamav-server clamav-server-systemd clamav-server-sysvinit clamav-update libc-client phpMyAdmin pptpd pptpd-sysvinit tnef tnef-dolphin tnef-nautilus uw-imap uw-imap-devel uw-imap-static uw-imap-utils
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever
 
 [clearos-epel-testing]
@@ -15,5 +15,5 @@ mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=testing-epel$releasev
 failovermethod=priority
 enabled=0
 gpgcheck=1
-exclude=amavisd-new amavisd-new-snmp amavisd-new-snmp-zeromq amavisd-new-zeromq clamav clamav-data clamav-data-empty clamav-devel clamav-filesystem clamav-lib clamav-milter clamav-milter-systemd clamav-milter-sysvinit clamav-scanner clamav-scanner-systemd clamav-scanner-sysvinit clamav-server clamav-server-systemd clamav-server-sysvinit clamav-update libc-client libdb4 libdb4-cxx libdb4-cxx-devel libdb4-devel libdb4-devel-static libdb4-doc libdb4-java libdb4-java-devel libdb4-tcl libdb4-tcl-devel libdb4-utils phpMyAdmin pptpd pptpd-sysvinit tnef tnef-dolphin tnef-nautilus uw-imap uw-imap-devel uw-imap-static uw-imap-utils
+exclude=amavisd-new amavisd-new-snmp amavisd-new-snmp-zeromq amavisd-new-zeromq clamav clamav-data clamav-data-empty clamav-devel clamav-filesystem clamav-lib clamav-milter clamav-milter-systemd clamav-milter-sysvinit clamav-scanner clamav-scanner-systemd clamav-scanner-sysvinit clamav-server clamav-server-systemd clamav-server-sysvinit clamav-update libc-client phpMyAdmin pptpd pptpd-sysvinit tnef tnef-dolphin tnef-nautilus uw-imap uw-imap-devel uw-imap-static uw-imap-utils
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever
