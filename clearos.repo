@@ -42,7 +42,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-Testing-$releasever
 name=ClearOS $releasever - $basearch - Contribs
 #baseurl=http://mirror.clearos.com/clearos/testing/$releasever/contribs/$basearch/
 mirrorlist=http://mirrorlist.clearos.com/clearos/mirrorlist/clearos-testing-contribs-$releasever
-enabled=0
+enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ClearOS-$releasever
 
