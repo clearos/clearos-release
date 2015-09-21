@@ -75,7 +75,7 @@ PRETTY_NAME="%{product_family} %{full_release_version} (%{release_name})"
 ANSI_COLOR="0;31"
 CPE_NAME="cpe:/o:clearos:clearos:7"
 HOME_URL="https://www.clearos.com/"
-BUG_REPORT_URL="http://tracker.clearos.com/"
+BUG_REPORT_URL="https://tracker.clearos.com/"
 
 EOF
 
