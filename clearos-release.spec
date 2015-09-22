@@ -6,10 +6,11 @@
 %define base_release_version 7
 %define full_release_version 7
 %define dist_release_version 7
+%define clearos_release_version 7.1.0
 %define upstream_rel 7.1
 %define product_vendor clear
 %define software_id 10700
-%define clearos_rel 1.14
+%define clearos_rel 1.15
 %define centos_rel 1.1503
 %define beta RC
 %define dist .v%{dist_release_version}
@@ -59,7 +60,7 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}/etc
 
 # create /etc/system-release and /etc/redhat-release
-echo "%{product_family} release %{full_release_version}.1 (%{release_name}) " > %{buildroot}/etc/clearos-release
+echo "%{product_family} release %{clearos_release_version} (%{release_name}) " > %{buildroot}/etc/clearos-release
 ln -s clearos-release %{buildroot}/etc/system-release
 ln -s clearos-release %{buildroot}/etc/redhat-release
 ln -s clearos-release %{buildroot}/etc/centos-release
