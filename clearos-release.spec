@@ -2,7 +2,7 @@
 %define product_family ClearOS
 %define variant_titlecase Server
 %define variant_lowercase server
-%define release_name RC 1
+%define release_name Final
 %define base_release_version 7
 %define full_release_version 7
 %define dist_release_version 7
@@ -10,9 +10,9 @@
 %define upstream_rel 7.1
 %define product_vendor clear
 %define software_id 10700
-%define clearos_rel 1.15
+%define clearos_rel 1.16
 %define centos_rel 1.1503
-%define beta RC
+#% define beta RC
 %define dist .v%{dist_release_version}
 
 Name:           clearos-release
@@ -23,7 +23,6 @@ Group:          System Environment/Base
 License:        GPLv2
 Provides:       clearos-release = %{version}-%{release}
 Provides:       clearos-release(upstream) = %{upstream_rel}
-# TODO: remove the following provides (/etc/product) after 7 beta 1
 Provides:       clearos-release-jws = 1.1
 Provides:       centos-release = %{version}-%{centos_rel}.el%{dist_release_version}.centos.2.7
 Provides:       centos-release(upstream) = %{upstream_rel}
