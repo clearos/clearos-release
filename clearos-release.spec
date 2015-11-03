@@ -23,6 +23,8 @@ Group:          System Environment/Base
 License:        GPLv2
 Provides:       clearos-release = %{version}-%{release}
 Provides:       clearos-release(upstream) = %{upstream_rel}
+Obsoletes:      redhat-release-as redhat-release-es redhat-release-ws redhat-release-de
+Obsoletes:      centos-release
 Provides:       clearos-release-jws = 1.1
 Provides:       centos-release = %{version}-%{centos_rel}.el%{dist_release_version}.centos.2.7
 Provides:       centos-release(upstream) = %{upstream_rel}
