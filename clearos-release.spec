@@ -6,11 +6,11 @@
 %define base_release_version 7
 %define full_release_version 7
 %define dist_release_version 7
-%define clearos_release_version 7.1.0
+%define clearos_release_version 7.1.1
 %define upstream_rel 7.1
 %define product_vendor clear
 %define software_id 10700
-%define clearos_rel 1.16
+%define clearos_rel 1.17
 %define centos_rel 1.1503
 #% define beta RC
 %define dist .v%{dist_release_version}
