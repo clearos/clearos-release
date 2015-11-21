@@ -2,17 +2,17 @@
 %define product_family ClearOS
 %define variant_titlecase Server
 %define variant_lowercase server
-%define release_name Final
+%define release_name Beta 1
 %define base_release_version 7
 %define full_release_version 7
 %define dist_release_version 7
-%define clearos_release_version 7.1.1
+%define clearos_release_version 7.2.0
 %define upstream_rel 7.1
 %define product_vendor clear
 %define software_id 10700
-%define clearos_rel 1.17
+%define clearos_rel 2.1
 %define centos_rel 1.1503
-#% define beta RC
+%define beta Beta
 %define dist .v%{dist_release_version}
 
 Name:           clearos-release
