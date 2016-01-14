@@ -10,7 +10,7 @@
 %define upstream_rel 7.1
 %define product_vendor clear
 %define software_id 10700
-%define clearos_rel 1.16
+%define clearos_rel 1.18
 %define centos_rel 1.1503
 #% define beta RC
 %define dist .v%{dist_release_version}
@@ -41,6 +41,11 @@ fi
 if [ -n "`grep ^bugtracker_url= /etc/yum.conf 2>/dev/null`" ]; then
     sed -i -e '/^bugtracker_url=.*/d' /etc/yum.conf
 fi
+
+# Hotfix hotfix-2016-01-14 only
+sed -i -e 's/^exclude=/exclude=samba-* /'  /etc/yum.repos.d/clearos-upstream.repo
+sed -i -e 's/^exclude=/exclude=roundcubemail-* /'  /etc/yum.repos.d/clearos-epel.repo
+
 exit 0
 
 %description
