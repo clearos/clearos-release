@@ -1,0 +1,52 @@
+[clearos-centos]
+name=CentOS-$releasever - Base
+baseurl=http://download1.clearsdn.com/centos/$releasever/os/$basearch
+    http://download2.clearsdn.com/centos/$releasever/os/$basearch
+    http://download3.clearsdn.com/centos/$releasever/os/$basearch
+    http://download4.clearsdn.com/centos/$releasever/os/$basearch
+enabled=0
+gpgcheck=1
+exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* debugmode dnsmasq-* initscripts iptables-* kernel-* libsmbclient-* libwbclient-* openldap-* perf ppp-* python-perf rp-pppoe samba-*
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
+
+[clearos-centos-fasttrack]
+name=CentOS-7 - fasttrack
+baseurl=http://download1.clearsdn.com/centos/$releasever/fasttrack/$basearch
+    http://download2.clearsdn.com/centos/$releasever/fasttrack/$basearch
+    http://download3.clearsdn.com/centos/$releasever/fasttrack/$basearch
+    http://download4.clearsdn.com/centos/$releasever/fasttrack/$basearch
+enabled=0
+gpgcheck=1
+exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* debugmode dnsmasq-* initscripts iptables-* kernel-* libsmbclient-* libwbclient-* openldap-* perf ppp-* python-perf rp-pppoe samba-*
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
+
+[clearos-centos-updates]
+name=CentOS-$releasever - Updates
+baseurl=http://download1.clearsdn.com/centos/$releasever/updates/$basearch
+    http://download2.clearsdn.com/centos/$releasever/updates/$basearch
+    http://download3.clearsdn.com/centos/$releasever/updates/$basearch
+    http://download4.clearsdn.com/centos/$releasever/updates/$basearch
+enabled=0
+gpgcheck=1
+exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* debugmode dnsmasq-* initscripts iptables-* kernel-* libsmbclient-* libwbclient-* openldap-* perf ppp-* python-perf rp-pppoe samba-*
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
+
+[clearos-centos-extras]
+name=CentOS-$releasever - Extras
+baseurl=http://download1.clearsdn.com/centos/$releasever/extras/$basearch
+    http://download2.clearsdn.com/centos/$releasever/extras/$basearch
+    http://download3.clearsdn.com/centos/$releasever/extras/$basearch
+    http://download4.clearsdn.com/centos/$releasever/extras/$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
+
+[clearos-centosplus]
+name=CentOS-$releasever - Plus
+baseurl=http://download1.clearsdn.com/centos/$releasever/centosplus/$basearch
+    http://download2.clearsdn.com/centos/$releasever/centosplus/$basearch
+    http://download3.clearsdn.com/centos/$releasever/centosplus/$basearch
+    http://download4.clearsdn.com/centos/$releasever/centosplus/$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever

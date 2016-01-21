@@ -9,8 +9,8 @@
 %define clearos_release_version 7.2.0
 %define upstream_rel 7.2
 %define product_vendor clear
-%define clearos_rel 2.2
-%define centos_rel 1.1511
+%define clearos_rel 2.3
+%define centos_rel 2.1511
 #% define beta Beta
 %define dist .v%{dist_release_version}
 
@@ -31,17 +31,25 @@ Provides:       redhat-release = %{upstream_rel}
 Provides:       system-release = %{upstream_rel}
 Provides:       system-release(releasever) = %{base_release_version}
 Source:         %{name}-%{version}.tar.gz
+Source100: clearos.repo
+Source101: clearos-centos.repo
+Source102: clearos-epel.repo
+Source103: centos-unverified.repo
+Source104: epel-unverified.repo
+# No idea why zfs is needed - no docs, no tracker.  Remove in future release - #7151.
+Source105: clearos-zfs.repo
 # TODO: FIXME: Need to hack /etc/yum.conf, so add requirement.  Kludge.
 Requires(post):       yum
 
 %post
-# TODO: FIXME: hacking yum.conf file
+# TODO: hacking yum.conf file
 if [ -n "`grep ^distroverpkg= /etc/yum.conf 2>/dev/null`" ]; then
     sed -i -e '/^distroverpkg=.*/d' /etc/yum.conf
 fi
 if [ -n "`grep ^bugtracker_url= /etc/yum.conf 2>/dev/null`" ]; then
     sed -i -e '/^bugtracker_url=.*/d' /etc/yum.conf
 fi
+
 exit 0
 
 %description
@@ -97,9 +105,12 @@ done
 
 # copy yum repos
 mkdir -p -m 755 %{buildroot}/etc/yum.repos.d
-for file in *.repo ; do
-    install -m 644 $file %{buildroot}/etc/yum.repos.d
-done
+install -m 644 %{SOURCE100} %{buildroot}/etc/yum.repos.d
+install -m 644 %{SOURCE101} %{buildroot}/etc/yum.repos.d
+install -m 644 %{SOURCE102} %{buildroot}/etc/yum.repos.d
+install -m 644 %{SOURCE103} %{buildroot}/etc/yum.repos.d
+install -m 644 %{SOURCE104} %{buildroot}/etc/yum.repos.d
+install -m 644 %{SOURCE105} %{buildroot}/etc/yum.repos.d
 
 # copy systemd presets
 mkdir -p %{buildroot}%{_prefix}/lib/systemd/system-preset/
