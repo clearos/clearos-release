@@ -6,12 +6,12 @@
 %define base_release_version 7
 %define full_release_version 7
 %define dist_release_version 7
-%define clearos_release_version 7.1.0
-%define upstream_rel 7.1
+%define clearos_release_version 7.2.0
+%define upstream_rel 7.2
 %define product_vendor clear
 
-%define clearos_rel 2.6
-%define centos_rel 1.1503
+%define clearos_rel 2.5
+%define centos_rel 1.1511
 #% define beta Beta
 %define dist .v%{dist_release_version}
 
