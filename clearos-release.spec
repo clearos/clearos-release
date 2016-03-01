@@ -9,7 +9,7 @@
 %define clearos_release_version 7.2.0
 %define upstream_rel 7.2
 %define product_vendor clear
-%define clearos_rel 2.7
+%define clearos_rel 2.8
 %define centos_rel 2.1511
 #% define beta Beta
 %define dist .v%{dist_release_version}
@@ -40,6 +40,7 @@ Source104: epel-unverified.repo
 Source105: clearos-zfs.repo
 # TODO: FIXME: Need to hack /etc/yum.conf, so add requirement.  Kludge.
 Requires(post):       yum
+Requires(post):       sed
 
 %post
 # TODO: hacking yum.conf file
