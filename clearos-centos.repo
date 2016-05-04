@@ -6,7 +6,7 @@ baseurl=http://download1.clearsdn.com/centos/$releasever/os/$basearch
     http://download4.clearsdn.com/centos/$releasever/os/$basearch
 enabled=0
 gpgcheck=1
-exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* debugmode dnsmasq-* initscripts iptables-* kernel-* libsmbclient-* libwbclient-* openldap-* perf ppp-* python-perf rp-pppoe samba-*
+exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* debugmode dnsmasq-* grub2-* initscripts iptables-* kernel-* libsmbclient-* libwbclient-* mokutil-* openldap-* perf ppp-* python-perf rp-pppoe samba-* shim-0*
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
 
 [clearos-centos-fasttrack]
@@ -17,7 +17,7 @@ baseurl=http://download1.clearsdn.com/centos/$releasever/fasttrack/$basearch
     http://download4.clearsdn.com/centos/$releasever/fasttrack/$basearch
 enabled=0
 gpgcheck=1
-exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* debugmode dnsmasq-* initscripts iptables-* kernel-* libsmbclient-* libwbclient-* openldap-* perf ppp-* python-perf rp-pppoe samba-*
+exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* debugmode dnsmasq-* grub2-* initscripts iptables-* kernel-* libsmbclient-* libwbclient-* mokutil-* openldap-* perf ppp-* python-perf rp-pppoe samba-* shim-0*
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
 
 [clearos-centos-updates]
@@ -28,7 +28,7 @@ baseurl=http://download1.clearsdn.com/centos/$releasever/updates/$basearch
     http://download4.clearsdn.com/centos/$releasever/updates/$basearch
 enabled=0
 gpgcheck=1
-exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* debugmode dnsmasq-* initscripts iptables-* kernel-* libsmbclient-* libwbclient-* openldap-* perf ppp-* python-perf rp-pppoe samba-*
+exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* debugmode dnsmasq-* grub2-* initscripts iptables-* kernel-* libsmbclient-* libwbclient-* mokutil-* openldap-* perf ppp-* python-perf rp-pppoe samba-* shim-0*
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
 
 [clearos-centos-extras]
