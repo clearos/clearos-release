@@ -1,4 +1,4 @@
-[clearos-epel-unverified]
+[epel-unverified]
 name=EPEL $releasever - $basearch - Unverified
 #baseurl=http://download.fedoraproject.org/pub/epel/$releasever/$basearch
 mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-$releasever&arch=$basearch
@@ -8,7 +8,7 @@ gpgcheck=1
 exclude=amavisd-new-* clamav-* clamd-* libc-client phpMyAdmin pptpd-* tnef-* uw-imap-* roundcubemail-*
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever
 
-[clearos-epel-testing-unverified]
+[epel-testing-unverified]
 name=EPEL $releasever - Testing - $basearch - Unverified
 #baseurl=http://download.fedoraproject.org/pub/epel/testing/$releasever/$basearch
 mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=testing-epel$releasever&arch=$basearch
