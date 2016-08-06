@@ -9,10 +9,9 @@
 %define clearos_release_version 7.2.0
 %define upstream_rel 7.2
 %define product_vendor clear
-%define clearos_rel 2.9
+%define clearos_rel 2.10
 %define centos_rel 2.1511
-#% define beta Beta
-%define dist .v%{dist_release_version}
+#define beta Beta
 
 Name:           clearos-release
 Version:        %{base_release_version}
@@ -25,7 +24,7 @@ Provides:       clearos-release(upstream) = %{upstream_rel}
 Obsoletes:      redhat-release-as redhat-release-es redhat-release-ws redhat-release-de
 Obsoletes:      centos-release
 Provides:       clearos-release-jws = 1.1
-Provides:       centos-release = %{version}-%{centos_rel}.el%{dist_release_version}.centos.2.7
+Provides:       centos-release = %{version}-%{centos_rel}.el%{dist_release_version}.centos.2.10
 Provides:       centos-release(upstream) = %{upstream_rel}
 Provides:       redhat-release = %{upstream_rel}
 Provides:       system-release = %{upstream_rel}
@@ -36,22 +35,7 @@ Source101: clearos-centos.repo
 Source102: clearos-epel.repo
 Source103: centos-unverified.repo
 Source104: epel-unverified.repo
-# No idea why zfs is needed - no docs, no tracker.  Remove in future release - #7151.
 Source105: clearos-zfs.repo
-# TODO: FIXME: Need to hack /etc/yum.conf, so add requirement.  Kludge.
-Requires(post):       yum
-Requires(post):       sed
-
-%post
-# TODO: hacking yum.conf file
-if [ -n "`grep ^distroverpkg= /etc/yum.conf 2>/dev/null`" ]; then
-    sed -i -e '/^distroverpkg=.*/d' /etc/yum.conf
-fi
-if [ -n "`grep ^bugtracker_url= /etc/yum.conf 2>/dev/null`" ]; then
-    sed -i -e '/^bugtracker_url=.*/d' /etc/yum.conf
-fi
-
-exit 0
 
 %description
 %{product_family} release files
@@ -88,7 +72,6 @@ HOME_URL="https://www.clearos.com/"
 BUG_REPORT_URL="https://tracker.clearos.com/"
 
 EOF
-
 # write cpe to /etc/system/release-cpe
 echo "cpe:/o:clearos:clearos:7" > %{buildroot}/etc/system-release-cpe
 
@@ -112,12 +95,6 @@ install -m 644 %{SOURCE102} %{buildroot}/etc/yum.repos.d
 install -m 644 %{SOURCE103} %{buildroot}/etc/yum.repos.d
 install -m 644 %{SOURCE104} %{buildroot}/etc/yum.repos.d
 install -m 644 %{SOURCE105} %{buildroot}/etc/yum.repos.d
-
-# copy systemd presets
-mkdir -p %{buildroot}%{_prefix}/lib/systemd/system-preset/
-for file in *.preset ; do
-    install -m 0644 $file %{buildroot}%{_prefix}/lib/systemd/system-preset/
-done
 
 # set up the dist tag macros
 install -d -m 755 %{buildroot}/etc/rpm
@@ -143,6 +120,12 @@ mkdir -p -m 755 %{buildroot}/%{_docdir}/clearos-release
 ln -s clearos-release %{buildroot}/%{_docdir}/redhat-release
 install -m 644 GPL %{buildroot}/%{_docdir}/clearos-release
 install -m 644 Contributors %{buildroot}/%{_docdir}/clearos-release
+
+# copy systemd presets
+mkdir -p %{buildroot}%{_prefix}/lib/systemd/system-preset/
+for file in *.preset ; do
+    install -m 0644 $file %{buildroot}%{_prefix}/lib/systemd/system-preset/
+done
 
 %clean
 rm -rf %{buildroot}
