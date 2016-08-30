@@ -9,7 +9,7 @@
 %define clearos_release_version 7.2.0
 %define upstream_rel 7.2
 %define product_vendor clear
-%define clearos_rel 2.10
+%define clearos_rel 2.11
 %define centos_rel 2.1511
 #define beta Beta
 
@@ -36,6 +36,18 @@ Source102: clearos-epel.repo
 Source103: centos-unverified.repo
 Source104: epel-unverified.repo
 Source105: clearos-zfs.repo
+
+%post
+# ClearOS: for CentOS-2-ClearOS environments.  Optional on ISO installs.
+# See details @ https://tracker.clearos.com/view.php?id=10051
+if ( [ -e /etc/yum.conf ] && [ -x /bin/sed ] ); then
+    if [ -n "`grep ^distroverpkg= /etc/yum.conf 2>/dev/null`" ]; then
+        sed -i -e '/^distroverpkg=.*/d' /etc/yum.conf
+    fi
+    if [ -n "`grep ^bugtracker_url= /etc/yum.conf 2>/dev/null`" ]; then
+        sed -i -e '/^bugtracker_url=.*/d' /etc/yum.conf
+    fi
+fi
 
 %description
 %{product_family} release files
