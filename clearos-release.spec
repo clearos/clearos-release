@@ -9,7 +9,7 @@
 %define clearos_release_version 7.2.0
 %define upstream_rel 7.2
 %define product_vendor clear
-%define clearos_rel 2.11
+%define clearos_rel 2.12
 %define centos_rel 2.1511
 #define beta Beta
 
@@ -24,7 +24,7 @@ Provides:       clearos-release(upstream) = %{upstream_rel}
 Obsoletes:      redhat-release-as redhat-release-es redhat-release-ws redhat-release-de
 Obsoletes:      centos-release
 Provides:       clearos-release-jws = 1.1
-Provides:       centos-release = %{version}-%{centos_rel}.el%{dist_release_version}.centos.2.10
+Provides:       centos-release = %{version}
 Provides:       centos-release(upstream) = %{upstream_rel}
 Provides:       redhat-release = %{upstream_rel}
 Provides:       system-release = %{upstream_rel}
