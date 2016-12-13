@@ -32,10 +32,7 @@ Provides:       system-release(releasever) = %{base_release_version}
 Source:         %{name}-%{version}.tar.gz
 Source100: clearos.repo
 Source101: clearos-centos.repo
-Source102: clearos-epel.repo
-Source103: centos-unverified.repo
-Source104: epel-unverified.repo
-Source105: clearos-zfs.repo
+Source102: clearos-zfs.repo
 
 %post
 # ClearOS: for CentOS-2-ClearOS environments.  Optional on ISO installs.
@@ -104,9 +101,6 @@ mkdir -p -m 755 %{buildroot}/etc/yum.repos.d
 install -m 644 %{SOURCE100} %{buildroot}/etc/yum.repos.d
 install -m 644 %{SOURCE101} %{buildroot}/etc/yum.repos.d
 install -m 644 %{SOURCE102} %{buildroot}/etc/yum.repos.d
-install -m 644 %{SOURCE103} %{buildroot}/etc/yum.repos.d
-install -m 644 %{SOURCE104} %{buildroot}/etc/yum.repos.d
-install -m 644 %{SOURCE105} %{buildroot}/etc/yum.repos.d
 
 # set up the dist tag macros
 install -d -m 755 %{buildroot}/etc/rpm
