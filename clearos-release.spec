@@ -9,7 +9,7 @@
 %define clearos_release_version 7.3.0
 %define upstream_rel 7.3
 %define product_vendor clear
-%define clearos_rel 3.1
+%define clearos_rel 3.2
 %define centos_rel 3.1611
 #define beta Beta
 
@@ -32,7 +32,8 @@ Provides:       system-release(releasever) = %{base_release_version}
 Source:         %{name}-%{version}.tar.gz
 Source100: clearos.repo
 Source101: clearos-centos.repo
-Source102: clearos-zfs.repo
+Source102: clearos-epel.repo
+Source103: clearos-zfs.repo
 
 %post
 # ClearOS: for CentOS-2-ClearOS environments.  Optional on ISO installs.
@@ -101,6 +102,7 @@ mkdir -p -m 755 %{buildroot}/etc/yum.repos.d
 install -m 644 %{SOURCE100} %{buildroot}/etc/yum.repos.d
 install -m 644 %{SOURCE101} %{buildroot}/etc/yum.repos.d
 install -m 644 %{SOURCE102} %{buildroot}/etc/yum.repos.d
+install -m 644 %{SOURCE103} %{buildroot}/etc/yum.repos.d
 
 # set up the dist tag macros
 install -d -m 755 %{buildroot}/etc/rpm
