@@ -9,7 +9,7 @@
 %define clearos_release_version 7.3.0
 %define upstream_rel 7.3
 %define product_vendor clear
-%define clearos_rel 3.4
+%define clearos_rel 3.5
 %define centos_rel 3.1611
 %define beta Beta
 
@@ -29,6 +29,7 @@ Provides:       centos-release(upstream) = %{upstream_rel}
 Provides:       redhat-release = %{upstream_rel}
 Provides:       system-release = %{upstream_rel}
 Provides:       system-release(releasever) = %{base_release_version}
+Provides:       epel-release
 Source:         %{name}-%{version}.tar.gz
 Source100: clearos.repo
 Source101: clearos-centos.repo
