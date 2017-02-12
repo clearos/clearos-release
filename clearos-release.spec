@@ -9,7 +9,7 @@
 %define clearos_release_version 7.3.0
 %define upstream_rel 7.3
 %define product_vendor clear
-%define clearos_rel 3.8
+%define clearos_rel 3.9
 %define centos_rel 3.1611
 %define beta Beta
 
