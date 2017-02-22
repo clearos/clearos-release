@@ -2,16 +2,16 @@
 %define product_family ClearOS
 %define variant_titlecase Server
 %define variant_lowercase server
-%define release_name Beta 3
+%define release_name Final
 %define base_release_version 7
 %define full_release_version 7
 %define dist_release_version 7
 %define clearos_release_version 7.3.0
 %define upstream_rel 7.3
 %define product_vendor clear
-%define clearos_rel 3.12
+%define clearos_rel 3.14
 %define centos_rel 3.1611
-%define beta Beta
+#define beta Beta
 
 Name:           clearos-release
 Version:        %{base_release_version}
