@@ -1,5 +1,5 @@
 [clearos-centos]
-name=CentOS-7 - Base
+name=CentOS-7 - $basearch - Base
 baseurl=http://download1.clearsdn.com/centos/7.4.1708/os/$basearch
     http://download2.clearsdn.com/centos/7.4.1708/os/$basearch
     http://download3.clearsdn.com/centos/7.4.1708/os/$basearch
@@ -10,7 +10,7 @@ exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* deb
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 [clearos-centos-fasttrack]
-name=CentOS-7 - fasttrack
+name=CentOS-7 - $basearch - fasttrack
 baseurl=http://download1.clearsdn.com/centos/7.4.1708/fasttrack/$basearch
     http://download2.clearsdn.com/centos/7.4.1708/fasttrack/$basearch
     http://download3.clearsdn.com/centos/7.4.1708/fasttrack/$basearch
@@ -21,7 +21,7 @@ exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* deb
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 [clearos-centos-updates]
-name=CentOS-7 - Updates
+name=CentOS-7 - $basearch - Updates
 baseurl=http://download1.clearsdn.com/centos/7.4.1708/updates/$basearch
     http://download2.clearsdn.com/centos/7.4.1708/updates/$basearch
     http://download3.clearsdn.com/centos/7.4.1708/updates/$basearch
@@ -32,7 +32,7 @@ exclude=centos-release centos-logos anaconda-* arpwatch ctdb-* cyrus-imapd-* deb
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 [clearos-centos-extras]
-name=CentOS-7 - Extras
+name=CentOS-7 - $basearch - Extras
 baseurl=http://download1.clearsdn.com/centos/7.4.1708/extras/$basearch
     http://download2.clearsdn.com/centos/7.4.1708/extras/$basearch
     http://download3.clearsdn.com/centos/7.4.1708/extras/$basearch
@@ -42,7 +42,7 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 [clearos-centosplus]
-name=CentOS-7 - Plus
+name=CentOS-7 - $basearch - Plus
 baseurl=http://download1.clearsdn.com/centos/7.4.1708/centosplus/$basearch
     http://download2.clearsdn.com/centos/7.4.1708/centosplus/$basearch
     http://download3.clearsdn.com/centos/7.4.1708/centosplus/$basearch
