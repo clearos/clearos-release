@@ -49,6 +49,8 @@ if ( [ -e /etc/yum.conf ] && [ -x /bin/sed ] ); then
     fi
 fi
 
+exit 0
+
 %description
 %{product_family} release files
 
